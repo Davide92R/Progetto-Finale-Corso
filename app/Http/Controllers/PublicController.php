@@ -54,4 +54,8 @@ class PublicController extends Controller
         Auth::logout();
         return redirect()->route('welcome')->with('success', 'Hai sloggato correttamente!');
     }
+
+    public function publicAnnuncement(){
+        return view('announce.publicAnnuncement');
+    }
 }

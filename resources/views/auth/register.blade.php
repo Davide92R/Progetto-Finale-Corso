@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{{route('register')}}">
+                <form method="POST" action="{{route('register')}}" class="mt-5">
                     @csrf
 
                     <div class="mb-3">

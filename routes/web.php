@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnounceController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,6 @@ Route::get('/logout', [PublicController::class, 'logout'])->name('logout');
 
 // form pubblica annuncio
 Route::get('/pubblica', [PublicController::class, 'publicAnnuncement'])->name('publicAnnuncement');
+
+// form pubblica annuncio
+Route::post('/announce-post', [AnnounceController::class, 'storeAnnouncement'])->name('storeAnnuncement');
