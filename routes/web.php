@@ -15,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[PublicController::class, 'welcome'])->name('welcome');
+// route to register
 Route::get('/register', [PublicController::class, 'registerview'])->name('registerview');
+Route::post('/register', [PublicController::class, 'register'])->name('register');
+
 Route::get('/login', [PublicController::class, 'loginview'])->name('loginview');
+Route::post('/login', [PublicController::class, 'login'])->name('login');
+
+Route::get('/logout', [PublicController::class, 'logout'])->name('logout');
