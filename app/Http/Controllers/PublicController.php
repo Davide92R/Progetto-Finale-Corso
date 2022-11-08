@@ -32,7 +32,7 @@ class PublicController extends Controller
             'password' => Hash::make($request->password),
         ]);
         Auth::login($user);
-        return redirect()->route('welcome')->with('success', 'You have successfully registered');
+        return redirect()->route('publicAnnuncement')->with('success', 'You have successfully registered');
     }
 
     public function login(Request $request){
@@ -43,7 +43,7 @@ class PublicController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('welcome')->with('success', 'Hai loggato con successo!');
+            return redirect()->route('publicAnnuncement')->with('success', 'Hai loggato con successo!');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
