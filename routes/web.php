@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[PublicController::class, 'welcome'])->name('welcome');
+Route::get('/register', [PublicController::class, 'registerview'])->name('registerview');
+Route::get('/login', [PublicController::class, 'loginview'])->name('loginview');
