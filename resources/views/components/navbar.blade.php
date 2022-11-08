@@ -23,9 +23,13 @@
                 <li class="nav-item">
                     <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
                 </li>
+              
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('logout')}}">Logout</a>
                 </li>
+
+               
+
               @endauth
             </ul>
           </div>
