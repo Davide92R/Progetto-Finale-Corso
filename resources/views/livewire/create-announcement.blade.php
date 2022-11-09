@@ -1,46 +1,54 @@
 <div>
-    <x-layout>    <h2 class="mt-5 text-center titoli">qui pubblicherai l'annuncio</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <form action="{{route('storeAnnuncement')}}" method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="form-group mt-5">
-                        <label for="titolo">Titolo</label>
-                        <input type="text" class="form-control" id="titolo" name="title" placeholder="Inserisci il titolo">
-                    </div>
+    <h2 class="mt-5 text-center titoli">qui pubblicherai l'annuncio</h2>
 
-                    <div class="form-group mt-5">
-                        <label for="descrizione">Descrizione</label>
-                        <textarea class="form-control" id="descrizione" name="description" rows="3"></textarea>
-                    </div>
-
-                    <div class="form-group mt-5">
-                        <label for="prezzo">Prezzo</label>
-                        <input type="number" class="form-control" id="prezzo" name="price" placeholder="Inserisci il prezzo">
-                    </div>
-
-                    <div class="form-group mt-5">
-                        <label for="immagine">Immagine</label>
-                        <input type="file" class="form-control" id="immagine" name="image">
-                    </div>
-
-                    <div class="form-group mt-5">
-                        <label for="categoria">Categoria</label>
-                        <select class="form-control" id="categoria" name="category_id">
-                            @foreach ($categories as $category)
-                            <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-                    <button type="submit">Invia</button>
-                </form>
-            </div>
+    @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
         </div>
-    </div>
-</x-layout>
+    @endif
+
+    <form wire:submit.prevent="storeAnnouncement">
+        @csrf
+        <div class="form-group mt-5">
+            <label for="titolo">Titolo</label>
+            <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" id="titolo" placeholder="Inserisci il titolo">
+
+            @error('title')
+                    {{$message}}
+            @enderror
+        </div>
+
+        <div class="form-group mt-5">
+            <label for="descrizione">Descrizione</label>
+            <textarea wire:model="description" class="form-control @error('description') is-invalid @enderror" id="descrizione" rows="3"></textarea>
+
+            @error('description')
+                    {{$message}}
+            @enderror
+        </div>
+
+        <div class="form-group mt-5">
+            <label for="prezzo">Prezzo</label>
+            <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror" id="prezzo" placeholder="Inserisci il prezzo">
+
+            @error('price')
+                    {{$message}}
+            @enderror
+        </div>
+
+        <div class="mb-3">
+            <label for="category">Categoria</label>
+            <select wire:model.defer="category" id="category" class="form-control">
+                <option value="">Scegli la categoria...</option>
+                @foreach ($categories as $category)
+                    <option value="{{$category->id}}">{{$category->name}}</option>
+                @endforeach
+            </select>
+        </div>
 
 
+
+        <button class="btn btn-primary" type="submit">Invia</button>
+    </form>
 </div>

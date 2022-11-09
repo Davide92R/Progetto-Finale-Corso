@@ -14,7 +14,7 @@ class Announce extends Model
         'title',
         'description',
         'price',
-        'category_id',
+        // 'category_id',
         // 'image',
     ];
 

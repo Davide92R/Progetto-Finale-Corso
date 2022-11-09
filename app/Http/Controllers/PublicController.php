@@ -58,9 +58,11 @@ class PublicController extends Controller
 
     public function publicAnnuncement(){
         $categories=Category::All();
-        return view('livewire.create-announcement', compact('categories'));
-        
-     
+        // compact categories for livewire.create-announcement
+
+        return view('announce.create', compact('categories'));
+
+
     }
 
 }
