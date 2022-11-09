@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Announce;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Hash;
 class PublicController extends Controller
 {
     public function welcome(){
-        return view('welcome');
+        $announces=Announce::take(6)->get()->sortByDesc('created_at');
+        return view('welcome', compact('announces'));
     }
     public function registerview(){
         return view('auth.register');
@@ -56,13 +58,10 @@ class PublicController extends Controller
         return redirect()->route('welcome')->with('success', 'Hai sloggato correttamente!');
     }
 
-    public function publicAnnuncement(){
-        $categories=Category::All();
-        // compact categories for livewire.create-announcement
-
-        return view('announce.create', compact('categories'));
-
-
+    public function categoryShow(Category $category){
+        return view('categoruyShow', compact('category'));
     }
+
+    
 
 }

@@ -26,4 +26,6 @@ Route::post('/login', [PublicController::class, 'login'])->name('login');
 Route::get('/logout', [PublicController::class, 'logout'])->name('logout');
 
 // form pubblica annuncio
-Route::get('/pubblica', [PublicController::class, 'publicAnnuncement'])->middleware('auth')->name('publicAnnuncement');
+Route::get('/pubblica', [AnnounceController::class, 'publicAnnouncement'])->middleware('auth')->name('publicAnnouncement');
+//rotte per mostrare card
+Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
