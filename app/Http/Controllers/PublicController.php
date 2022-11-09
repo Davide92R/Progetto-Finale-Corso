@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\Facades\Auth;
@@ -56,6 +57,10 @@ class PublicController extends Controller
     }
 
     public function publicAnnuncement(){
-        return view('announce.publicAnnuncement');
+        $categories=Category::All();
+        return view('livewire.create-announcement', compact('categories'));
+        
+     
     }
+
 }

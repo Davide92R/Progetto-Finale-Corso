@@ -1,5 +1,5 @@
-<x-layout>
-    <h2 class="mt-5 text-center titoli">qui pubblicherai l'annuncio</h2>
+<div>
+    <x-layout>    <h2 class="mt-5 text-center titoli">qui pubblicherai l'annuncio</h2>
 
     <div class="container">
         <div class="row">
@@ -28,18 +28,10 @@
 
                     <div class="form-group mt-5">
                         <label for="categoria">Categoria</label>
-                        <select class="form-control" id="categoria" name="category">
-                            <option value="1">Informatica</option>
-                            <option value="2">Elettronica</option>
-                            <option value="3">Sport</option>
-                            <option value="4">Giardinaggio</option>
-                            <option value="5">Casa</option>
-                            <option value="6">Videogiochi</option>
-                            <option value="7">Libri</option>
-                            <option value="8">Musica</option>
-                            <option value="9">Film</option>
-                            <option value="10">Moda</option>
-                            <option value="11">Altro</option>
+                        <select class="form-control" id="categoria" name="category_id">
+                            @foreach ($categories as $category)
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
                         </select>
                     </div>
 
@@ -48,5 +40,7 @@
             </div>
         </div>
     </div>
-
 </x-layout>
+
+
+</div>
