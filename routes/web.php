@@ -27,5 +27,7 @@ Route::get('/logout', [PublicController::class, 'logout'])->name('logout');
 
 // form pubblica annuncio
 Route::get('/pubblica', [AnnounceController::class, 'publicAnnouncement'])->middleware('auth')->name('publicAnnouncement');
-//rotte per mostrare card
+//rotte per mostrare categorie
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+// rotta parametrica dettaglio annuncio
+Route::get('/dettaglio/annuncio/{announce}', [AnnounceController::class, 'showAnnouncement'])->name('showAnnouncement');
