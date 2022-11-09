@@ -43,6 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
+    
+
+
     public function announces()
     {
         return $this->hasMany(Announce::class);

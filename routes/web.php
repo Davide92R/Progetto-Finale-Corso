@@ -26,4 +26,4 @@ Route::post('/login', [PublicController::class, 'login'])->name('login');
 Route::get('/logout', [PublicController::class, 'logout'])->name('logout');
 
 // form pubblica annuncio
-Route::get('/pubblica', [PublicController::class, 'publicAnnuncement'])->name('publicAnnuncement');
+Route::get('/pubblica', [PublicController::class, 'publicAnnuncement'])->middleware('auth')->name('publicAnnuncement');
