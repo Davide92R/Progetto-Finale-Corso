@@ -11,6 +11,8 @@
 <body>
     <x-navbar></x-navbar>
     {{$slot}}
+
+    <x-footer></x-footer>
     @livewireScripts
 </body>
 </html>
