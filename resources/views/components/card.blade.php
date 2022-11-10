@@ -1,8 +1,8 @@
-<div class="container my-5">
+{{-- <div class="container my-5">
     <div class="row">
         <div class="col-12">
             <div class="row justify-content-around">
-                @foreach($announces as $announce)
+                @foreach($announces as $announce) --}}
                 <div class="card shadow" style="width: 18rem;">
                     <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -15,9 +15,9 @@
                     </div>
                 </div>
 
-                @endforeach
-                {{$announces->links()}}
-            </div>
+                {{-- @endforeach
+                {{$announces->links()}} --}}
+            {{-- </div>
         </div>
     </div>
-</div>
+</div> --}}
