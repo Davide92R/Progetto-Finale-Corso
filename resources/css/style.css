@@ -1,10 +1,11 @@
 
 :root{
     --charleston-green: #0b2027ff;
-    --teal-blue: #40798cff;
-    --green-sheen: #70a9a1ff;
-    --ash-gray: #cfd7c7ff;
-    --cornsilk: #f6f1d1ff;
+    --teal-blue: #495867 ;
+    --green-sheen: #577399 ;
+    --ash-gray: #BDD5EA;
+    --cornsilk: #F7F7FF;
+    --details-red:#FE5F55;
 }
 
 body{
@@ -14,8 +15,8 @@ body{
 .header{
     display: flex;
     height: 100vh;
-    background-image: url('storage/img/PrestoHeadImg.jpg');
-    background-size: cover;
+    background-color: var(--green-sheen);
+    background-size:cover;
 
     justify-content: center;
     align-items: center;
@@ -36,10 +37,11 @@ body{
     text-align: center;
 }
 .ournav{
-    background-color: transparent;
+    /* background-color: transparent; */
     color: var(--cornsilk);
     position: fixed;
     top: 0;
+    z-index: 9999;
 }
 
 /* CSS */

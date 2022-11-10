@@ -10,10 +10,12 @@
     <div class="header">
         <div class="container">
             <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="col-12">
+                        <h1 class="text-center headtext">Benvenuto su Presto.it</h1>
+                    </div>
                 <div class="col-12">
-                    <h1 class="text-center headtext">Benvenuto su Presto.it</h1>
-                </div>
-                @auth
+                    @auth
                 <div class="col-12 d-flex justify-content-center align-items-center mt-4">
                     <div class="nav-item">
                         <a href="{{route('publicAnnouncement')}}"><button class="pubann btn btn-primary">Pubblica un annuncio!</button></a>
@@ -27,6 +29,8 @@
                     </div>
                 </div>
                 @endguest
+             </div>
+            </div>
             </div>
         </div>
     </div>
