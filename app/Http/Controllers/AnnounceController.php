@@ -13,8 +13,15 @@ class AnnounceController extends Controller
         // compact categories for livewire.create-announcement
 
         return view('announce.create', compact('categories'));
-
-
+    }
+    public function showAnnouncement(Announce $announce){
+      
+        return view('announce.showAnnouncement',compact('announce'));
+    }
+    public function announcementIndex(){
+         
+        $announces=Announce::paginate(5);
+        return view('announce.announcementIndex',compact('announces'));
     }
 
 }

@@ -31,3 +31,5 @@ Route::get('/pubblica', [AnnounceController::class, 'publicAnnouncement'])->midd
 Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 // rotta parametrica dettaglio annuncio
 Route::get('/dettaglio/annuncio/{announce}', [AnnounceController::class, 'showAnnouncement'])->name('showAnnouncement');
+// pagina di tutti gli annunci
+Route::get('/tutti/annunci', [AnnounceController::class, 'announcementIndex'])->name('announcementIndex');

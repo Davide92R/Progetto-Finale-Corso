@@ -53,7 +53,7 @@
                             <h5 class="card-title">{{$announce->title}}</h5>
                             <p class="card-text">{{$announce->description}}</p>
                             <p class="card-text">{{$announce->price}}</p>
-                            <a href="#" class="btn btn-primary">Dettaglio</a>
+                            <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary">Dettaglio</a>
                             <a href="#" class="btn btn-success">Categoria: {{$announce->category->name}}</a>
                             <p class="card-footer">Pubblicato il: {{$announce->created_at->format('d/m/Y')}}</p>
                         </div>
@@ -206,7 +206,7 @@
 <!-- End Popular Product -->
 
 <!-- Start Testimonial Slider -->
-<div class="testimonial-section">
+{{-- <div class="testimonial-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 mx-auto text-center">
@@ -300,11 +300,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Testimonial Slider -->
 
 <!-- Start Blog Section -->
-<div class="blog-section">
+{{-- <div class="blog-section">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-6">
@@ -355,7 +355,7 @@
 
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Blog Section -->	
 
 <!-- Start Footer Section -->
