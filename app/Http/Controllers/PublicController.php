@@ -14,6 +14,7 @@ class PublicController extends Controller
 {
     public function welcome(){
         $announces=Announce::take(6)->get()->sortByDesc('created_at');
+        $announces=Announce::paginate(5);
         return view('welcome', compact('announces'));
     }
     public function registerview(){

@@ -11,9 +11,8 @@
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
-                    <h1>Benvenuto su<span clsas="d-block">Presto.it</span></h1>
-                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
-                    <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+                    <h1>Benvenuto su<span clsas="d-block"> Presto.it</span></h1>
+                    <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
                 @auth
                 <div class="col-12 d-flex justify-content-center align-items-center mt-4">
@@ -42,20 +41,21 @@
 
 {{-- start i nostri annunci --}}
 
-    <div class="container">
-        <h2 class="text-center mt-5">I nostri annunci</h2>
-        <div class="row">
-            @foreach ($announces as $announce)
+    <div class="container text-center">
+        <h2 class="mt-5">I nostri annunci</h2>
+        <div class="row justify-content-around">
+            {{-- mostra 5 articoli --}}
+            @foreach($announces as $announce)
                 <div class="col-12 col-md-4">
-                    <div class="card shadow" style="width: 18rem;">
+                    <div class="card shadow mt-4" style="width: 18rem;">
                         <img src="https://picsum.photos/200" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$announce->title}}</h5>
                             <p class="card-text">{{$announce->description}}</p>
                             <p class="card-text">{{$announce->price}}</p>
-                            <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary">Dettaglio</a>
-                            <a href="#" class="btn btn-success">Categoria: {{$announce->category->name}}</a>
-                            <p class="card-footer">Pubblicato il: {{$announce->created_at->format('d/m/Y')}}</p>
+                            <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary redcolor">Dettaglio</a>
+                            <a href="#" class="btn btn-success mt-2">Categoria: {{$announce->category->name}}</a>
+                            <p class="card-footer mt-2 mb-2">Pubblicato il: {{$announce->created_at->format('d/m/Y')}}</p>
                         </div>
                     </div>
                 </div>
@@ -140,15 +140,8 @@
                 </div>
             </div>
             <div class="col-lg-5 ps-lg-5">
-                <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-
-                <ul class="list-unstyled custom-list my-4">
-                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                </ul>
+                <h2 class="section-title mb-4">Come è nato Presto.it?</h2>
+                <p class="mb-5">Il nostro scopo è connettere le <strong>persone!</strong> <br>Puntiamo a rendere la compravendita di <strong>Resell</strong> il più facile possibile, sia per il <strong>venditore</strong>, che per <strong>l'acquirente!</strong> <br>Che altro dirvi? Ci vediamo "<strong>Presto!</strong>"</p>
                 <p><a herf="#" class="btn">Explore</a></p>
             </div>
         </div>
@@ -157,7 +150,7 @@
 <!-- End We Help Section -->
 
 <!-- Start Popular Product -->
-<div class="popular-product">
+{{-- <div class="popular-product">
     <div class="container">
         <div class="row">
 
@@ -202,7 +195,7 @@
 
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Popular Product -->
 
 <!-- Start Testimonial Slider -->

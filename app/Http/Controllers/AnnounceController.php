@@ -15,12 +15,12 @@ class AnnounceController extends Controller
         return view('announce.create', compact('categories'));
     }
     public function showAnnouncement(Announce $announce){
-      
+
         return view('announce.showAnnouncement',compact('announce'));
     }
     public function announcementIndex(){
-         
-        $announces=Announce::paginate(5);
+        // mostra tutti gli annunci
+        $announces=Announce::paginate(10);
         return view('announce.announcementIndex',compact('announces'));
     }
 
