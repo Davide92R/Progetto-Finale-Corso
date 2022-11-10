@@ -15,7 +15,7 @@ body{
 .header{
     display: flex;
     height: 100vh;
-    background-color: var(--green-sheen);
+    background-color: var(php --green-sheen);
     background-size:cover;
 
     justify-content: center;
