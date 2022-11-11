@@ -30,7 +30,7 @@
                     <a class="nav-link" href="{{route('loginview')}}">Login</a>
                 </li>
               @endguest
-
+{{-- Inserire qui if per zona revisore --}}
               @auth
                 <li class="nav-item">
                     <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>

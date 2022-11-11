@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AnnounceController;
-use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
+use App\Http\Controllers\AnnounceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->
 Route::get('/dettaglio/annuncio/{announce}', [AnnounceController::class, 'showAnnouncement'])->name('showAnnouncement');
 // pagina di tutti gli annunci
 Route::get('/tutti/annunci', [AnnounceController::class, 'announcementIndex'])->name('announcementIndex');
+// rotta per la home del revisore
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
