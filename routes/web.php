@@ -47,3 +47,5 @@ Route::patch('/rifiuta/annuncio/{announce}', [RevisorController::class, 'rejectA
 Route::get('/lavora-con-noi', [RevisorController::class, 'becomeRevisor'])->middleware("auth")->name('becomeRevisor');
 
 Route::get('/becomeRevisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+//Rotta ricerca annuncio
+Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnounces'])->name('announces.search');

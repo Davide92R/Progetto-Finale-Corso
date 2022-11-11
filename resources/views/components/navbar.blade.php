@@ -31,30 +31,30 @@
         </li>
         @endguest
         @auth
-        <li class="nav-item">
-          <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
+          </li>
 
-        @if(Auth::user()->is_revisor)
-        <li class="nav-item">
-          <a class="nav-link btn btn-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
-            Zona revisore
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              {{App\Models\Announce::toBeRevisionedCount()}}
-              <span class="visually-hidden">unread messages</span>
-            </span>
-          </a>
-        </li>
-        @endif
-
-        <li class="nav-item">
-          <a class="nav-link" href="{{route('logout')}}">Logout</a>
-        </li>
-
-
-
+          @if(Auth::user()->is_revisor)
+          <li class="nav-item">
+            <a class="nav-link btn btn-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
+              Zona revisore
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{App\Models\Announce::toBeRevisionedCount()}}
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </a>
+          </li>
+          @endif
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('logout')}}">Logout</a>
+          </li>
         @endauth
       </ul>
+      <form action="{{route('announces.search')}}" method="GET" class="d-flex">
+        <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
+        <button class="btn btn-outline-success" type="submit">Cerca</button>
+      </form>
     </div>
   </div>
 </nav>

@@ -4,13 +4,14 @@ namespace App\Models;
 
 
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Announce extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
 
     protected $fillable = [
         'title',
@@ -19,6 +20,18 @@ class Announce extends Model
         // 'category_id',
         // 'image',
     ];
+
+    public function toSearchableArray(){
+        $category=$this->category;
+        $array=[
+            'id'=>$this->id,
+            'title'=>$this->title,
+            'description'=>$this->description,
+            'price'=>$this->price,
+            'category'=>$category,
+        ];
+        return $array;
+    }
 
     public function category()
     {
