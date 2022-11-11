@@ -36,3 +36,7 @@ Route::get('/dettaglio/annuncio/{announce}', [AnnounceController::class, 'showAn
 Route::get('/tutti/annunci', [AnnounceController::class, 'announcementIndex'])->name('announcementIndex');
 // rotta per la home del revisore
 Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+// rotta accettazione annuncio
+Route::patch('/accetta/annuncio/{announce}', [RevisorController::class, 'acceptAnnounce'])->name('revisor.accept_announce');
+// rotta per rifiuta annuncio
+Route::patch('/rifiuta/annuncio/{announce}', [RevisorController::class, 'rejectAnnounce'])->name('revisor.reject_announce');
