@@ -30,7 +30,11 @@
           <a class="nav-link" href="{{route('loginview')}}">Login</a>
         </li>
         @endguest
-        {{-- Inserire qui if per zona revisore --}}
+        @auth
+        <li class="nav-item">
+          <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
+        </li>
+
         @if(Auth::user()->is_revisor)
         <li class="nav-item">
           <a class="nav-link btn btn-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
@@ -42,17 +46,13 @@
           </a>
         </li>
         @endif
-        @auth
-        <li class="nav-item">
-          <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
-        </li>
-        
+
         <li class="nav-item">
           <a class="nav-link" href="{{route('logout')}}">Logout</a>
         </li>
-        
-        
-        
+
+
+
         @endauth
       </ul>
     </div>

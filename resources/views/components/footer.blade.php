@@ -29,12 +29,28 @@
         </div>
 
         <div class="row g-5 mb-5">
-            <div class="col-lg-4">
-                <div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Furni<span>.</span></a></div>
-                <p class="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>
+            <div class="col-lg-5">
+                <div class="footer-widget">
+                    <h3 class="widget-title">About Us</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quae, voluptas. Quisquam, quae, voluptas. Quisquam, quae, voluptas. Quisquam, quae, voluptas.</p>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <h3 class="widget-title"><a href="{{route("becomeRevisor")}}">Lavora con noi</a></h3>
+                        <p>Ti piacerebbe lavorare con noi? Compila il form cliccando sul link qui sopra!</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <lord-icon
+                        src="https://cdn.lordicon.com/kjkiqtxg.json"
+                        trigger="hover"
+                        colors="outline:#121331,primary:#e83a30,secondary:#4bb3fd,tertiary:#9cc2f4"
+                        style="width:150px;height:150px">
+                        </lord-icon>
+                    </div>
+                </div>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-7">
                 <div class="row links-wrap">
                     <div class="col-6 col-sm-6 col-md-3">
                         <ul class="list-unstyled custom-social">

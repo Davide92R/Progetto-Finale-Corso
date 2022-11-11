@@ -25,5 +25,7 @@
 
     <x-footer></x-footer>
     @livewireScripts
+
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
 </body>
 </html>

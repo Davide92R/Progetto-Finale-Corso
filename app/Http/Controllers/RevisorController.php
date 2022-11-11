@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Announce;
 use Illuminate\Http\Request;
+use App\Mail\BecomeRevisorMail;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Artisan;
 
 class RevisorController extends Controller
 {
@@ -18,5 +23,17 @@ class RevisorController extends Controller
     public function rejectAnnounce(Announce $announce){
         $announce ->setAccepted(false);
         return redirect()->back()->with('message', 'Annuncio rifiutato');
+    }
+
+    public function becomeRevisor(){
+        Mail::to('admin@presto.it')->send(new BecomeRevisorMail(Auth::user()));
+        return redirect()->back()->with('message', 'Richiesta inviata');
+    }
+
+    public function makeRevisor(User $user){
+        Artisan::call('presto:makeUserRevisor', [
+            "email" => $user->email
+        ]);
+        return redirect()->back()->with('message', 'Utente promosso a revisore');
     }
 }

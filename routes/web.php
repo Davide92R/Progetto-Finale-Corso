@@ -34,9 +34,16 @@ Route::get('/categoria/{category}', [PublicController::class, 'categoryShow'])->
 Route::get('/dettaglio/annuncio/{announce}', [AnnounceController::class, 'showAnnouncement'])->name('showAnnouncement');
 // pagina di tutti gli annunci
 Route::get('/tutti/annunci', [AnnounceController::class, 'announcementIndex'])->name('announcementIndex');
+
+// ROTTE REVISOR
+
 // rotta per la home del revisore
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('IsRevisor')->name('revisor.index');
 // rotta accettazione annuncio
-Route::patch('/accetta/annuncio/{announce}', [RevisorController::class, 'acceptAnnounce'])->name('revisor.accept_announce');
+Route::patch('/accetta/annuncio/{announce}', [RevisorController::class, 'acceptAnnounce'])->middleware('IsRevisor')->name('revisor.accept_announce');
 // rotta per rifiuta annuncio
-Route::patch('/rifiuta/annuncio/{announce}', [RevisorController::class, 'rejectAnnounce'])->name('revisor.reject_announce');
+Route::patch('/rifiuta/annuncio/{announce}', [RevisorController::class, 'rejectAnnounce'])->middleware('IsRevisor')->name('revisor.reject_announce');
+
+Route::get('/lavora-con-noi', [RevisorController::class, 'becomeRevisor'])->middleware("auth")->name('becomeRevisor');
+
+Route::get('/becomeRevisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

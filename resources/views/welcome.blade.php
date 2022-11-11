@@ -46,19 +46,29 @@
         <div class="row justify-content-around">
             {{-- mostra 5 articoli --}}
             @foreach($announces as $announce)
-                <div class="col-12 col-md-4">
-                    <div class="card shadow mt-4" style="width: 18rem;">
-                        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{$announce->title}}</h5>
-                            <p class="card-text">{{$announce->description}}</p>
-                            <p class="card-text">{{$announce->price}} <span>€</span></p>
-                            <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary redcolor">Dettaglio</a>
-                            <a href="#" class="btn btn-success mt-2">Categoria: {{$announce->category->name}}</a>
-                            <p class="card-footer mt-2 mb-2">Pubblicato il: {{$announce->created_at->format('d/m/Y')}}</p>
+                @if ($announce->is_accepted == 1)
+                    <div class="col-12 col-md-4">
+                        <div class="card" style="width: 18rem; height: 32rem; text-start">
+                            <img src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="card-img-top" alt="...">
+
+                            <div class="card-body general">
+                                <h5 class="card-title nomeCard">{{$announce->title}}</h5>
+                                <h2 class="prezzo"><i class="fa-solid fa-money-bill-wave"></i> {{$announce->price}}€</h2>
+                                <p class="card-text luogoCard">Palermo(PA)</p>
+                            </div>
+
+                            <div class="card-body category">
+                                <hr class="solid">
+                                <h4 class="card-title"><i class="fa-solid fa-house-chimney-window"></i>{{$announce->category->name}}</h4>
+                                <hr class="solid">
+                            </div>
+
+                            <div class="card-body button">
+                                <a href="{{route("showAnnouncement", compact("announce"))}}"><button class="button-24" role="button">Dettaglio</button></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endif
             @endforeach
         </div>
     </div>
