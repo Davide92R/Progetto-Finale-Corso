@@ -1,19 +1,19 @@
 
-    <nav class="navbar navbar-expand-lg ournav">
+    <nav class="navbar navbar-expand-lg bg-nav fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-center align-item-center" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route("welcome")}}">Home</a>
+            <ul class="navbar-nav mb-2 h4">
+              <li class="nav-item ms-3">
+                <a class="nav-link" aria-current="page" href="{{route("welcome")}}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route("announcementIndex")}}">Annunci</a>
+              <li class="nav-item ms-3">
+                <a class="nav-link" aria-current="page" href="{{route("announcementIndex")}}">Annunci</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown ms-3">
                 <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
                 <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
                   @foreach ($categories as $category)
@@ -23,10 +23,10 @@
                 </ul>
               </li>
               @guest
-                <li class="nav-item">
+                <li class="nav-item ms-3">
                     <a class="nav-link" href="{{route('registerview')}}">Registrati</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item ms-3">
                     <a class="nav-link" href="{{route('loginview')}}">Login</a>
                 </li>
               @endguest

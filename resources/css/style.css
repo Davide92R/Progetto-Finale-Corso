@@ -12,6 +12,16 @@ body{
     background-color: var(--cornsilk);
 }
 
+/* Navbar start */
+.bg-nav{
+  background-color: var(--ash-gray);
+}
+.nav-link:hover{
+  color: var(--details-red);
+  border-bottom: solid 2px var(--details-red);
+}
+/* Navbar end */
+
 .header{
     display: flex;
     height: 100vh;
@@ -591,14 +601,7 @@ body{
           border-color: #3b5d50;
           -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-        .footer-section .subscription-form .form-control::-webkit-input-placeholder {
-          font-size: 14px; }
-        .footer-section .subscription-form .form-control::-moz-placeholder {
-          font-size: 14px; }
-        .footer-section .subscription-form .form-control:-ms-input-placeholder {
-          font-size: 14px; }
-        .footer-section .subscription-form .form-control:-moz-placeholder {
-          font-size: 14px; }
+        
       .footer-section .subscription-form .btn {
         border-radius: 10px !important; }
     .footer-section .sofa-img {

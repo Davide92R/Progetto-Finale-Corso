@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Hash;
 class PublicController extends Controller
 {
     public function welcome(){
-        $announces=Announce::take(6)->get()->sortByDesc('created_at');
+        $announces=Announce::get()->sortByDesc('created_at')->take(3);
         $announces=Announce::paginate(5);
         return view('welcome', compact('announces'));
     }
@@ -36,7 +36,7 @@ class PublicController extends Controller
             'password' => Hash::make($request->password),
         ]);
         Auth::login($user);
-        return redirect()->route('publicAnnouncement')->with('success', 'You have successfully registered');
+        return redirect()->route('publicAnnouncement')->with('success', 'Ti sei registrato con successo!');
     }
 
     public function login(Request $request){

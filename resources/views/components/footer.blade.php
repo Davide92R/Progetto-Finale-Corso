@@ -1,4 +1,4 @@
-<footer class="footer-section">
+<footer class="footer-section my-5">
     <div class="container relative">
 
         <div class="sofa-img">
