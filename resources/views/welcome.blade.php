@@ -89,8 +89,8 @@
                             <div class="icon">
                                 <img src="images/truck.svg" alt="Image" class="imf-fluid">
                             </div>
-                            <h3>Fast &amp; Free Shipping</h3>
-                            <p>il sito più intuitivo e splendende</p>
+                            <h3>Spedizioni gratuite &amp; veloci</h3>
+                            <p>...con una spesa minima di 59 euro</p>
                         </div>
                     </div>
 
@@ -99,8 +99,8 @@
                             <div class="icon">
                                 <img src="images/bag.svg" alt="Image" class="imf-fluid">
                             </div>
-                            <h3>Easy to Shop</h3>
-                            <p>facile acquistare per la semplicità del nostro sito</p>
+                            <h3>Aquista facilmente, velocemente</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis reprehenderit repellendus hic placeat atque ab voluptas pariatur debitis autem consequatur, aliquid officiis fugit fugiat aspernatur sit iure, dolore nisi illum!</p>
                         </div>
                     </div>
 
@@ -109,7 +109,7 @@
                             <div class="icon">
                                 <img src="images/support.svg" alt="Image" class="imf-fluid">
                             </div>
-                            <h3>24/7 Support</h3>
+                            <h3>Supporto 24/7</h3>
                             <p>offriamo un supporto per tutti h24.</p>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             <div class="icon">
                                 <img src="images/return.svg" alt="Image" class="imf-fluid">
                             </div>
-                            <h3>Hassle Free Returns</h3>
+                            <h3>Pagamenti sicuri</h3>
                             <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
             <div class="col-lg-5 ps-lg-5">
                 <h2 class="section-title mb-4">Come è nato Presto.it?</h2>
                 <p class="mb-5">Il nostro scopo è connettere le <strong>persone!</strong> <br>Puntiamo a rendere la compravendita di <strong>Resell</strong> il più facile possibile, sia per il <strong>venditore</strong>, che per <strong>l'acquirente!</strong> <br>Che altro dirvi? Ci vediamo "<strong>Presto!</strong>"</p>
-                <p><a herf="#" class="btn">Explore</a></p>
+                {{-- <p><a herf="#" class="btn">Esplora</a></p> --}}
             </div>
         </div>
     </div>

@@ -41,7 +41,7 @@
               Zona revisore
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {{App\Models\Announce::toBeRevisionedCount()}}
-                <span class="visually-hidden">unread messages</span>
+                <span class="visually-hidden">Messaggi non letti</span>
               </span>
             </a>
           </li>

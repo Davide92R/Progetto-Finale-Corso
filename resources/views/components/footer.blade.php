@@ -31,7 +31,7 @@
         <div class="row g-5 mb-5">
             <div class="col-lg-5">
                 <div class="footer-widget">
-                    <h3 class="widget-title">About Us</h3>
+                    <h3 class="widget-title">Chi siamo</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quae, voluptas. Quisquam, quae, voluptas. Quisquam, quae, voluptas. Quisquam, quae, voluptas.</p>
                 </div>
                 <div class="row">
@@ -53,12 +53,12 @@
             <div class="col-lg-7">
                 <div class="row links-wrap">
                     <div class="col-6 col-sm-6 col-md-3">
-                        <ul class="list-unstyled custom-social">
+                        {{-- <ul class="list-unstyled custom-social">
                             <li><a href="#"><span class="fa fa-brands fa-facebook-f"></span></a></li>
                             <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li>
                             <li><a href="#"><span class="fa fa-brands fa-instagram"></span></a></li>
                             <li><a href="#"><span class="fa fa-brands fa-linkedin"></span></a></li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>

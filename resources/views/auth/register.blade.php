@@ -34,7 +34,7 @@
                       <input type="password" class="form-control" name="password_confirmation">
                     </div>
 
-                    <button type="submit" class="button-64" role="button"><span class="text">Register</span></button>
+                    <button type="submit" class="button-64" role="button"><span class="text">Registra</span></button>
 
                   </form>
             </div>
