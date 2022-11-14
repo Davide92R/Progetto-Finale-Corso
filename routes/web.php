@@ -49,3 +49,5 @@ Route::get('/lavora-con-noi', [RevisorController::class, 'becomeRevisor'])->midd
 Route::get('/becomeRevisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 //Rotta ricerca annuncio
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAnnounces'])->name('announces.search');
+// rotta bandiere
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');

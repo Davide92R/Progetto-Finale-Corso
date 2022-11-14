@@ -42,7 +42,7 @@
 {{-- start i nostri annunci --}}
 
     <div class="container text-center">
-        <h2 class="mt-5">I nostri annunci</h2>
+        <p class="h2 my-2 fw-bold ">{{__('ui.allAnnounces')}}</p>
         <div class="row justify-content-around">
             {{-- mostra 5 articoli --}}
             @foreach($announces as $announce)

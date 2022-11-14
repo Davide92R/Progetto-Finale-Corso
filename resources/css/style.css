@@ -20,6 +20,11 @@ body{
   color: var(--details-red);
   border-bottom: solid 2px var(--details-red);
 }
+
+.buttonFlag{
+  width: 25px;
+  height: 40px;
+}
 /* Navbar end */
 
 .header{
@@ -768,3 +773,4 @@ hr.solid {
     margin-bottom: 4%;
     color: rgba(0, 0, 0, 0.6);
   }
+
