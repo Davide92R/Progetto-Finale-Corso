@@ -1,11 +1,11 @@
 <footer class="footer-section my-5">
     <div class="container relative">
 
-        <div class="sofa-img">
+        {{-- <div class="sofa-img">
             <img src="images/sofa.png" alt="Image" class="img-fluid">
-        </div>
+        </div> --}}
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-lg-8">
                 <div class="subscription-form">
                     <h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
@@ -26,7 +26,7 @@
 
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <div class="row g-5 mb-5">
             <div class="col-lg-5">
@@ -47,8 +47,8 @@
                         style="width:150px;height:150px">
                         </lord-icon>
                     </div>
-                </div>
-            </div>
+              </div>
+            </div> 
 
             <div class="col-lg-7">
                 <div class="row links-wrap">
