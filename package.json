@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.2",
+        "flag-icon-css": "^4.1.7",
         "font-awesome": "^4.7.0"
     }
 }

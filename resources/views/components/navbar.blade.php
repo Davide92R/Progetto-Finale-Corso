@@ -55,6 +55,17 @@
         <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
         <button class="btn btn-outline-success" type="submit">Cerca</button>
       </form>
+      <ul class="navbar-nav"> 
+        <li class="nav-item">
+          <x-_locale lang="it" nation="it"/>
+       </li>
+       <li class="nav-item">
+         <x-_locale lang="en" nation="gb"/>
+      </li>
+      <li class="nav-item">
+       <x-_locale lang="es" nation="es"/>
+    </li>
+      </ul>
     </div>
   </div>
 </nav>
