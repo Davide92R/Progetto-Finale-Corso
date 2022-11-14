@@ -6,13 +6,18 @@ use Livewire\Component;
 use App\Models\Announce;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class CreateAnnouncement extends Component
 {
+    use WithFileUploads;
+
     public $title;
     public $description;
     public $price;
     public $category;
+    public $temporary_images;
+    public $images = [];
 
     protected $rules = [
         'title' => 'required|min:3',
@@ -25,6 +30,7 @@ class CreateAnnouncement extends Component
         'required' => 'Il campo :attribute è obbligatorio',
         'min' => 'Il campo :attribute deve avere almeno :min caratteri',
         'numeric' => 'Il campo :attribute deve essere un numero',
+        
     ];
 
     public function updated($propertyName)
