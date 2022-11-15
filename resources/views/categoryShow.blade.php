@@ -12,30 +12,28 @@
             <div class="col-12">
                 <div class="row">
                     @forelse($category->announces as $announce)
-                    <div class="card shadow" style="width: 18rem;">
-                        <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                    <div class="card">
+                        <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$announce->title}}</h5>
-                            <p class="card-text">{{$announce->description}}</p>
-                            <p class="card-text">{{$announce->price}}</p>
-                            <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary">Dettaglio</a>
-                            <a href="#" class="btn btn-success">Categoria: {{$announce->category->name}}</a>
-                            <p class="card-footer">Pubblicato il: {{$announce->created_at->format('d/m/Y')}} -Autore: {{$announce->user->name ?? ''}}</p>
+                            <h5 class="card-title cardTitle">{{$announce->title}}</h5>
+                            <p class="card-text cardPrice">{{$announce->price}}$</p>
+                            <p class="card-text cardDesc">{{$announce->description}}</p>
+                            <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">Dettagli</span></a>
                         </div>
-                    </div>  
+                    </div>
                 @empty
                     <div class="col-12">
                         <p class="h1">Non sono presenti annunci per questa categoria!</p>
                         <p class="h2">Pubblicane uno: <a href="{{route('publicAnnouncement')}}" class="btn btn-success shadow">Nuovo annuncio</a></p>
                     </div>
                 @endforelse
-                
-                        
-                 
+
+
+
                 </div>
             </div>
         </div>
     </div>
 
-    
+
 </x-layout>

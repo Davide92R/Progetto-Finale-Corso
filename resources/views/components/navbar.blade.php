@@ -1,4 +1,4 @@
-
+{{--
 <nav class="navbar navbar-expand-lg bg-nav fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{route('welcome')}}">Presto.it</a>
@@ -57,7 +57,7 @@
         <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
         <button class="btn btn-outline-success" type="submit">Cerca</button>
       </form>
-      <ul class="navbar-nav"> 
+      <ul class="navbar-nav">
         <li class="nav-item me-0">
           <x-_locale lang="it" nation="it"/>
         </li>
@@ -70,4 +70,53 @@
       </ul>
     </div>
   </div>
+</nav> --}}
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand navLogo" href="{{route("welcome")}}">Presto.it</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link navText" aria-current="page" href="{{route("announcementIndex")}}">{{__('ui.announces')}}</a>
+                </li>
+                <li>
+                    <div class="dropdown navText">
+                        <a class="nav-link dropdown-toggle navText" href="#" role="button" id="CategoryDropdown"
+                            data-bs-toggle="dropdown">
+                            Categorie
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="CategoryDropdown">
+                            @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            @guest
+                <div class="d-flex align-items-center">
+                    <a class="nav-link navTextEnd" href="{{route('loginview')}}">Login</a>
+                    <a class="nav-link navTextEnd" href="{{route('registerview')}}">{{__('ui.register')}}</a>
+                </div>
+            @endguest
+
+            @auth
+                @if (Auth::user()->is_revisor)
+                    <a class="nav-link navTextEnd" href="{{route('revisor.index')}}">Revisor</a>
+                @endif
+
+                <div class="d-flex align-items-center">
+                    <a class="nav-link navTextEnd" href="#">{{__('ui.welcome2')}} {{Auth::user()->name}}</a>
+                    <a class="nav-link navTextEnd" href="{{route('logout')}}">Logout</a>
+                </div>
+            @endauth
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
 </nav>

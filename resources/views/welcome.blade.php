@@ -11,20 +11,20 @@
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
-                    <h1>{{__('ui.welcome')}}<span clsas="d-block"> Presto.it</span></h1>
+                    <h1>{{__('ui.welcome')}}<span clsas="d-block Monserrat"> Presto.it</span></h1>
                     <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
                 @auth
-                <div class="col-12 d-flex justify-content-center align-items-center mt-4">
+                <div class="col-12  mt-4">
                     <div class="nav-item">
-                        <a href="{{route('publicAnnouncement')}}"><button class="pubann btn btn-primary">Pubblica un annuncio!</button></a>
+                        <a href="{{route('publicAnnouncement')}}"><button class="btn headButt"><span class="footerTitle White">Pubblica un annuncio!</span></button></a>
                     </div>
                 </div>
                 @endauth
                 @guest
                 <div class="col-12 d-flex justify-content-center align-items-center mt-4">
                     <div class="nav-item">
-                        <a href="{{route("registerview")}}"><button class="pubann btn btn-primary">{{__('ui.postAnnuonce')}}</button></a>
+                        <a href="{{route("registerview")}}"><button class="btn btnCard headButt btn-primary">{{__('ui.postAnnuonce')}}</button></a>
                     </div>
                 </div>
                 @endguest
@@ -47,7 +47,7 @@
             {{-- mostra 5 articoli --}}
             @foreach($announces as $announce)
                 @if ($announce->is_accepted == 1)
-                    <div class="col-12 col-md-4">
+                    {{-- <div class="col-12 col-md-4">
                         <div class="card" style="width: 18rem; height: 32rem; text-start">
                             <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
 
@@ -66,6 +66,16 @@
                             <div class="card-body button">
                                 <a href="{{route("showAnnouncement", compact("announce"))}}"><button class="button-24" role="button">Dettaglio</button></a>
                             </div>
+                        </div>
+                    </div> --}}
+
+                    <div class="card">
+                        <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title cardTitle">{{$announce->title}}</h5>
+                            <p class="card-text cardPrice">{{$announce->price}}$</p>
+                            <p class="card-text cardDesc">{{$announce->description}}</p>
+                            <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">Dettagli</span></a>
                         </div>
                     </div>
                 @endif

@@ -9,15 +9,13 @@
                         <div class="col-12 col-md-4 d-flex justify-content-around">
                             {{-- <x-card title="{{$announce['title']}}" description="{{$announce['description']}}" price="{{$announce['price']}}" category="{{$announce['category']}}"
                             /> --}}
-                            <div class="card shadow mb-3" style="width: 18rem;">
-                                <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">{{$announce->title}}</h5>
-                                    <p class="card-text">{{$announce->description}}</p>
-                                    <p class="card-text">{{$announce->price}} <span>€</span></p>
-                                    <a href="{{route('showAnnouncement', compact('announce'))}}" class="btn btn-primary mb-2">Dettaglio</a>
-                                    <a href="#" class="btn btn-success mb-2">Categoria: {{$announce->category->name}}</a>
-                                    <p class="card-footer">Pubblicato il: {{$announce->created_at->format('d/m/Y')}} -Autore: {{$announce->user->name ?? ''}}</p>
+                            <div class="card">
+                                <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title cardTitle">{{$announce->title}}</h5>
+                                    <p class="card-text cardPrice">{{$announce->price}}$</p>
+                                    <p class="card-text cardDesc">{{$announce->description}}</p>
+                                    <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">Dettagli</span></a>
                                 </div>
                             </div>
                         </div>
