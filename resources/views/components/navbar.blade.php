@@ -48,10 +48,7 @@
             </a>
           </li>
           @endif
-          <li class="nav-item ms-3">
-        @endif
           <li class="nav-item">
-
             <a class="nav-link" href="{{route('logout')}}">Logout</a>
           </li>
         @endauth
