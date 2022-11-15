@@ -11,7 +11,7 @@
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
-                    <h1>Benvenuto su<span clsas="d-block"> Presto.it</span></h1>
+                    <h1>{{__('ui.welcome')}}<span clsas="d-block"> Presto.it</span></h1>
                     <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
                 @auth
@@ -24,7 +24,7 @@
                 @guest
                 <div class="col-12 d-flex justify-content-center align-items-center mt-4">
                     <div class="nav-item">
-                        <a href="{{route("registerview")}}"><button class="pubann btn btn-primary">Registrati per pubblicare un annuncio!</button></a>
+                        <a href="{{route("registerview")}}"><button class="pubann btn btn-primary">{{__('ui.postAnnuonce')}}</button></a>
                     </div>
                 </div>
                 @endguest

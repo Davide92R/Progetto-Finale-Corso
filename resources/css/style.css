@@ -212,7 +212,14 @@ body{
                     color: #ffffff; }
       /* bottoni sezione 1 end                     */
 
-/* sezione 1 end */
+/* Bottoni Accetta e Rifiuta REVISORE */
+.btn2{
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+}
+/* Bottoni Accetta e Rifiuta REVISORE end */
+
 
 
 
@@ -700,7 +707,6 @@ hr.solid {
 .card-title{
     color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
-    font-size: 100%;
 }
 
 .general{
