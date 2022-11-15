@@ -59,23 +59,19 @@ class CreateAnnouncement extends Component
         }
     }
 
-    public function store(){
-        $this->validate();
+    // public function store(){
+    //     $this->validate();
         
-        $this->announce = Category::find($this->category)->announces()->create($this->validate());
-        $this->announce->user()->associate(Auth::user());
-        $this->announce->save();
+    //     $this->announce = Category::find($this->category)->announces()->create($this->validate());
+    //     $this->announce->user()->associate(Auth::user());
+    //     $this->announce->save();
 
-        if(count($this->images)){
-            foreach($this->images as $image){
-                $this->announce->images()->create(['path'=>$image->store('images','public')]);
-            }
-        }
+       
 
-        session()->flash('message','Articolo inserito con successo, sarà pubblicato dopo la revisione');
-        $this->clearForm();
+    //     session()->flash('message','Articolo inserito con successo, sarà pubblicato dopo la revisione');
+    //     $this->clearForm();
 
-    }
+    // }
 
     public function updated($propertyName)
     {
@@ -93,6 +89,11 @@ class CreateAnnouncement extends Component
             ]);
         Auth::user()->announces()->save($announce);
 
+        if(count($this->images)){
+            foreach($this->images as $image){
+                    $announce->images()->create(['path'=>$image->store('images','public')]);
+            }
+        }
         session()->flash('message', 'Annuncio creato con successo');
         $this->clearForm();
     }

@@ -38,7 +38,7 @@
 
           @if(Auth::user()->is_revisor)
           <li class="nav-item ms-3">
-            <a class="nav-link btn btn-success position-relative" aria-current="page" href="{{route('revisor.index')}}">
+            <a class="nav-link btn position-relative" aria-current="page" href="{{route('revisor.index')}}">
               {{__('ui.revisor')}}
 
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
