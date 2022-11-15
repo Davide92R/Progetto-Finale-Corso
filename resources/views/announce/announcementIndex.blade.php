@@ -10,7 +10,7 @@
                             {{-- <x-card title="{{$announce['title']}}" description="{{$announce['description']}}" price="{{$announce['price']}}" category="{{$announce['category']}}"
                             /> --}}
                             <div class="card shadow mb-3" style="width: 18rem;">
-                                <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                                <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{$announce->title}}</h5>
                                     <p class="card-text">{{$announce->description}}</p>

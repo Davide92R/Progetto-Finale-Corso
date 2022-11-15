@@ -10,7 +10,7 @@
     <div class="container mt-5">
         <div class="row d-flex align-items-center">
             <div class="col-12 col-md-6">
-                <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
             </div>
             <div class="col-12 col-md-6 ml-5">
                 <h1>{{$announce->title}}</h1>
