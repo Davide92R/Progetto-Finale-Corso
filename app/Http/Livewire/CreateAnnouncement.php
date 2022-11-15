@@ -34,7 +34,7 @@ class CreateAnnouncement extends Component
         'numeric' => 'Il campo :attribute deve essere un numero',
         'temporary_images.required'  => 'l immagine è richiesta',
         'temporary_images.*.image'  => 'i file devono essere immagini',
-        
+
     ];
 
     public function UpdatedTemporaryImages(){
@@ -63,7 +63,7 @@ class CreateAnnouncement extends Component
             }
         }
         session()->flash('message','Articolo inserito con successo,sarà pubblicato dopo la revisione');
-        $this->cleanForm();
+        $this->clearForm();
 
     }
 
