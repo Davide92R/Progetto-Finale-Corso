@@ -35,10 +35,12 @@
             <a class="nav-link">{{__('ui.welcome2')}} {{Auth::user()->name}}</a>
           </li>
 
+
           @if(Auth::user()->is_revisor)
           <li class="nav-item ms-3">
             <a class="nav-link btn btn-success position-relative" aria-current="page" href="{{route('revisor.index')}}">
               {{__('ui.revisor')}}
+
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {{App\Models\Announce::toBeRevisionedCount()}}
                 <span class="visually-hidden">Messaggi non letti</span>
@@ -47,6 +49,9 @@
           </li>
           @endif
           <li class="nav-item ms-3">
+        @endif
+          <li class="nav-item">
+
             <a class="nav-link" href="{{route('logout')}}">Logout</a>
           </li>
         @endauth
@@ -58,13 +63,13 @@
       <ul class="navbar-nav"> 
         <li class="nav-item me-0">
           <x-_locale lang="it" nation="it"/>
-       </li>
-       <li class="nav-item">
-         <x-_locale lang="en" nation="gb"/>
-      </li>
-      <li class="nav-item">
-       <x-_locale lang="es" nation="es"/>
-    </li>
+        </li>
+        <li class="nav-item">
+          <x-_locale lang="en" nation="gb"/>
+        </li>
+        <li class="nav-item">
+          <x-_locale lang="es" nation="es"/>
+        </li>
       </ul>
     </div>
   </div>
