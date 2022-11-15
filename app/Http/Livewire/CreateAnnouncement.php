@@ -18,6 +18,9 @@ class CreateAnnouncement extends Component
     public $category;
     public $temporary_images;
     public $images = [];
+    public $image;
+    public $form_id;
+    public $announce;
 
     protected $rules = [
         'title' => 'required|min:3',
@@ -32,8 +35,11 @@ class CreateAnnouncement extends Component
         'required' => 'Il campo :attribute è obbligatorio',
         'min' => 'Il campo :attribute deve avere almeno :min caratteri',
         'numeric' => 'Il campo :attribute deve essere un numero',
-        'temporary_images.required'  => 'l immagine è richiesta',
-        'temporary_images.*.image'  => 'i file devono essere immagini',
+        'temporary_images.required'  => 'L\ immagine è richiesta',
+        'temporary_images.*.image'  => 'I file devono essere immagini',
+        'temporary_images.*.max'  => 'L\immagine deve essere al massimo di 1mb ',
+        'images.image'  => 'L\immagine deve essere un\immagine',
+        'images.max' => 'L\immagine deve essere massimo di 1mb',
 
     ];
 
@@ -56,13 +62,13 @@ class CreateAnnouncement extends Component
     public function store(){
         $this->validate();
         
-        $this->announce=Category::find($this->category)->announces()->create($this->validate());
+        $this->announce = Category::find($this->category)->announces()->create($this->validate());
         if(count($this->images)){
             foreach($this->images as $image){
                 $this->announce->images()->create(['path'=>$image->store('images','public')]);
             }
         }
-        session()->flash('message','Articolo inserito con successo,sarà pubblicato dopo la revisione');
+        session()->flash('message','Articolo inserito con successo, sarà pubblicato dopo la revisione');
         $this->clearForm();
 
     }
