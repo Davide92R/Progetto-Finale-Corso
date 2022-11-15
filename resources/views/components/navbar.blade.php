@@ -35,7 +35,7 @@
             <a class="nav-link">Benvenuto {{Auth::user()->name}}</a>
           </li>
 
-          @if(Auth::user()->is_revisor)
+        @if(Auth::user()->is_revisor)
           <li class="nav-item">
             <a class="nav-link btn btn-success btn-sm position-relative" aria-current="page" href="{{route('revisor.index')}}">
               Zona revisore
@@ -45,7 +45,7 @@
               </span>
             </a>
           </li>
-          @endif
+        @endif
           <li class="nav-item">
             <a class="nav-link" href="{{route('logout')}}">Logout</a>
           </li>

@@ -774,3 +774,8 @@ hr.solid {
     color: rgba(0, 0, 0, 0.6);
   }
 
+ .img-preview{
+  height: 200px;
+  width: 200px;
+
+ }

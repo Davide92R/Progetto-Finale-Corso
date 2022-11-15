@@ -3,6 +3,7 @@
 namespace App\Models;
 
 
+use App\Models\Image;
 use App\Models\Category;
 use Laravel\Scout\Searchable;
 use Illuminate\Foundation\Auth\User;
