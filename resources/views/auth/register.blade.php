@@ -11,7 +11,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
+                        <label for="name" class="form-label">{{__('ui.name')}}</label>
                         <input type="text" class="form-control"  name="name">
                         {{-- @error('title')
                           {{$message}}
@@ -19,9 +19,9 @@
                     </div>
 
                     <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Inserisci la tua mail</label>
+                      <label for="exampleInputEmail1" class="form-label">{{__('ui.mail')}}</label>
                       <input name="email" type="email" class="form-control">
-                      <div  class="form-text">Non scambieremo la tua email con parti terze.</div>
+                      <div  class="form-text">{{__('ui.thirdParties')}}.</div>
                     </div>
 
                     <div class="mb-3">
@@ -30,11 +30,11 @@
                     </div>
 
                     <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Conferma Password</label>
+                      <label for="exampleInputPassword1" class="form-label">{{__('ui.confirm')}}</label>
                       <input type="password" class="form-control" name="password_confirmation">
                     </div>
 
-                    <button type="submit" class="button-64" role="button"><span class="text">Registra</span></button>
+                    <button type="submit" class="button-64" role="button"><span class="text">{{__('ui.register')}}</span></button>
 
                   </form>
             </div>

@@ -21,7 +21,7 @@
                                     <h5 class="card-title cardTitle">{{$announce->title}}</h5>
                                     <p class="card-text cardPrice">{{$announce->price}}$</p>
                                     <p class="card-text cardDesc">{{$announce->description}}</p>
-                                    <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">Dettagli</span></a>
+                                    <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">{{__('ui.buttonDet')}}</span></a>
                                 </div>
                             </div>
                         </div>

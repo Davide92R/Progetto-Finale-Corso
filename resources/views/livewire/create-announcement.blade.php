@@ -1,6 +1,6 @@
 <div>
     <div class="pt-5">
-        <h2 class="my-5 text-center titoli">Qui pubblicherai l'annuncio</h2>
+        <h2 class="my-5 text-center titoli">{{__('ui.publish')}}</h2>
     
         @if (session()->has('message'))
             <div class="alert alert-success">
@@ -11,8 +11,8 @@
         <form wire:submit.prevent="storeAnnouncement">
             @csrf
             <div class="form-group mt-5">
-                <label for="titolo">Titolo</label>
-                <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" id="titolo" placeholder="Inserisci il titolo">
+                <label for="titolo">{{__('ui.title')}}</label>
+                <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" id="titolo" placeholder="{{__('ui.title2')}}">
     
                 @error('title')
                         {{$message}}
@@ -20,7 +20,7 @@
             </div>
     
             <div class="form-group mt-5">
-                <label for="descrizione">Descrizione</label>
+                <label for="descrizione">{{__('ui.description')}}</label>
                 <textarea wire:model="description" class="form-control @error('description') is-invalid @enderror" id="descrizione" rows="3"></textarea>
     
                 @error('description')
@@ -29,8 +29,8 @@
             </div>
     
             <div class="form-group mt-5">
-                <label for="prezzo">Prezzo</label>
-                <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror" id="prezzo" placeholder="Inserisci il prezzo">
+                <label for="prezzo">{{__('ui.price')}}</label>
+                <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror" id="prezzo" placeholder="{{__('ui.price2')}}">
     
                 @error('price')
                         {{$message}}
@@ -38,9 +38,9 @@
             </div>
      
             <div class="mb-3">
-                <label for="category">Categoria</label>
+                <label for="category">{{__('ui.category')}}</label>
                 <select wire:model.defer="category" id="category" class="form-control">
-                    <option value="">Scegli la categoria...</option>
+                    <option value="">{{__('ui.category2')}}...</option>
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
@@ -72,7 +72,7 @@
 
     
     
-            <button class="btn btn-primary" type="submit">Invia</button>
+            <button class="btn btn-primary" type="submit">{{__('ui.send')}}</button>
         </form>
     </div>
 </div>
