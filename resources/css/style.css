@@ -971,3 +971,9 @@ hr.solid {
   .altezzaPreview{
     height: 60vh;
   }
+
+  .cardCustom{
+    border: solid 3px var(--details-red);
+    box-shadow: 10px 10px var(--details-red) ;
+
+  }

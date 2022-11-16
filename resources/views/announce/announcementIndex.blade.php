@@ -3,7 +3,7 @@
     <div class="container-fluid bg-categoryShow pb-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center bg-showCategory">
-                <h1 class="text-center ms-3 mt-5">Tutti i nostri annunci!</h1>
+                <h1 class="text-center ms-3 mt-5">{{__('ui.allAnnounces')}}</h1>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
                         <div class="col-12 col-md-4 d-flex justify-content-around">
                             {{-- <x-card title="{{$announce['title']}}" description="{{$announce['description']}}" price="{{$announce['price']}}" category="{{$announce['category']}}"
                             /> --}}
-                            <div class="card">
+                            <div class="card cardCustom">
                                 <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title cardTitle">{{$announce->title}}</h5>

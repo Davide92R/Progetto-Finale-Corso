@@ -9,5 +9,5 @@ return[
     'welcome2'=>'Welcome',
     'revisor'=>'Reviser Area',
     'search'=>'Search',
-
+   
 ];

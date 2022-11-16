@@ -12,7 +12,7 @@
             <div class="col-12">
                 <div class="row">
                     @forelse($category->announces as $announce)
-                    <div class="card">
+                    <div class="card cardCustom">
                         <img src="{{!$announce->images()->get()->isEmpty() ? $announce->images()->first()->getUrl(400,300) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
                         <div class="card-body">
                             <h5 class="card-title cardTitle">{{$announce->title}}</h5>

@@ -70,8 +70,7 @@
       </ul>
     </div>
   </div> --}}
-</nav> --}}
-
+</nav> 
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand navLogo" href="{{route("welcome")}}">Presto.it</a>
@@ -84,7 +83,7 @@
                     <div class="dropdown navText">
                         <a class="nav-link dropdown-toggle navText" href="#" role="button" id="CategoryDropdown"
                             data-bs-toggle="dropdown">
-                            Categorie
+                            {{__('ui.category')}}
                         </a>
 
                         <ul class="dropdown-menu " style="z-index:99; aria-labelledby="CategoryDropdown">
@@ -116,8 +115,8 @@
                 </div>
             @endauth
             <form action="{{route('announces.search')}}" method="GET" class="d-flex ms-3">
-              <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
-              <button class="btn btn-outline-success" type="submit">Cerca</button>
+              <input name="searched" class="form-control me-2" type="search" placeholder={{__('ui.search')}} aria-label="Cerca">
+              <button class="btn btn-outline-success" type="submit">{{__('ui.search')}}</button>
             </form>
               <ul class="navbar-nav">
                 <li class="nav-item me-0">
