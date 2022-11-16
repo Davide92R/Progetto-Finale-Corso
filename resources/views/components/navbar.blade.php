@@ -53,7 +53,7 @@
           </li>
         @endauth
       </ul>
-      <form action="{{route('announces.search')}}" method="GET" class="d-flex ms-3">
+      {{-- <form action="{{route('announces.search')}}" method="GET" class="d-flex ms-3">
         <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
         <button class="btn btn-outline-success" type="submit">Cerca</button>
       </form>
@@ -69,7 +69,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> --}}
 </nav> --}}
 
 <nav class="navbar navbar-expand-lg">
@@ -105,7 +105,9 @@
 
             @auth
                 @if (Auth::user()->is_revisor)
-                    <a class="nav-link navTextEnd" href="{{route('revisor.index')}}">Revisor</a>
+                    <a class="nav-link navTextEnd" href="{{route('revisor.index')}}">Revisor
+                      
+                    </a>
                 @endif
 
                 <div class="d-flex align-items-center">
@@ -113,6 +115,23 @@
                     <a class="nav-link navTextEnd" href="{{route('logout')}}">Logout</a>
                 </div>
             @endauth
+            <form action="{{route('announces.search')}}" method="GET" class="d-flex ms-3">
+              <input name="searched" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Cerca">
+              <button class="btn btn-outline-success" type="submit">Cerca</button>
+            </form>
+              <ul class="navbar-nav">
+                <li class="nav-item me-0">
+                  <x-_locale lang="it" nation="it"/>
+                </li>
+                <li class="nav-item">
+                  <x-_locale lang="en" nation="gb"/>
+                </li>
+                <li class="nav-item">
+                  <x-_locale lang="es" nation="es"/>
+                </li>
+              </ul>
+    </div>
+  </div>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

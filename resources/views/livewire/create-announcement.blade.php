@@ -56,9 +56,9 @@
           
          @if(!empty($images))
              <div class="row">
-                 <div class="col-12">
+                 <div class="col-12 ">
                    <p>Photo preview:</p>
-                   <div class="row border border-4 border info rounded shadow py-4">
+                   <div class="row border border-4 border info rounded shadow py-4 altezzaPreview">
                      @foreach($images as $key => $image)
                        <div class="col my-3">
                                <div class= "img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>

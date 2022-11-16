@@ -23,7 +23,7 @@
 							<h4>Links</h4>
 						</div>
 						<ul>
-							<li><a href="#">About Us</a></li>
+							<li><a href="{{route("becomeRevisor")}}">Lavora con noi</a></li>
 							<li><a href="#">Services</a></li>
 							<li><a href="#">Portfolio</a></li>
 							<li><a href="#">Blog</a></li>

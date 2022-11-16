@@ -1,6 +1,12 @@
 <x-layout>
-<div class="my-5 pt-3">
-    <h1 class="text-center mt-5">Tutti i nostri annunci!</h1>
+<div class="">
+    <div class="container-fluid bg-categoryShow pb-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center bg-showCategory">
+                <h1 class="text-center ms-3 mt-5">Tutti i nostri annunci!</h1>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-12">

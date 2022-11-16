@@ -963,3 +963,11 @@ hr.solid {
     font-size: 17px;
     color: var(--black);
   }
+
+  .bg-categoryShow{
+    background-color: var(--bg-color);
+  }
+
+  .altezzaPreview{
+    height: 60vh;
+  }
