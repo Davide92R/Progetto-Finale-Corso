@@ -15,10 +15,10 @@
 
           <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
               @if ($announce_to_check->images)
-                <div class="carousel-inner">
+                <div class="carousel-inner ">
                   @foreach ($announce_to_check->images as $image)
                       <div class="carousel-item @if($loop->first)active @endif">
-                        <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
+                        <img src="{{!$image->get()->isEmpty() ? Storage::url($image->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard vh-100" alt="...">
                       </div>
                   @endforeach
                 </div>

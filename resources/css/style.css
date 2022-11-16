@@ -968,12 +968,13 @@ hr.solid {
     background-color: var(--bg-color);
   }
 
-  .altezzaPreview{
-    height: 60vh;
-  }
-
   .cardCustom{
     border: solid 3px var(--details-red);
     box-shadow: 10px 10px var(--details-red) ;
+
+  }
+  .img-preview{
+    width: 200px;
+    height: 200px;
 
   }

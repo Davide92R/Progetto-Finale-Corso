@@ -20,7 +20,8 @@ class AnnounceController extends Controller
     }
     public function announcementIndex(){
         // mostra tutti gli annunci
-        $announces=Announce::paginate(6);
+        $announces = Announce::where('is_accepted', true)->orderBy('created_at','desc')->paginate(9);
+        
         return view('announce.announcementIndex',compact('announces'));
     }
 

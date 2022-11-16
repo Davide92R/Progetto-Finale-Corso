@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Hash;
 class PublicController extends Controller
 {
     public function welcome(){
-        $announces=Announce::get()->sortByDesc('created_at')->take(3);
-        $announces=Announce::paginate(5);
+        $announces=Announce::where('is_accepted', true)->orderBy('created_at','desc')->take(3)->get();
+       
         return view('welcome', compact('announces'));
     }
     public function registerview(){
@@ -68,7 +68,7 @@ class PublicController extends Controller
     }
 
     public function searchAnnounces(Request $request){
-        $announces = Announce::search($request->searched)->where('is_accepted', true)->paginate(10);
+        $announces = Announce::search($request->searched)->where('is_accepted', true)->orderBy('created_at','desc')->paginate(10);
         return view('announce.announcementIndex', compact('announces'));
     }
 
