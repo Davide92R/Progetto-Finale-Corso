@@ -54,6 +54,31 @@
                 </div>
         </div>
     </div>
+    <div class="p-2">
+      <div class="col-12 col-md-6">
+        <img src="{{$image->getUrl(400,300)}}" class="img-fluid p-3 rounded"alt="">
+      </div>
+    </div>
+    <div class="col-md-3 border-end">
+      <h5 class="tc-accent mt-3">Tags</h5>
+      <div class="p-2">
+        @if ($image->image)
+          @foreach($image->labels as $label)
+            <p class="d-inline">{{$label}},</p>
+          @endforeach
+        @endif
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-body">
+        <h5 class="tc-accent">Revisione Immagini</h5>
+          <p>Adulti: <span class="{{$image->adult}}"></span></p>
+          <p>Satira: <span class="{{$image->spoof}}"></span></p>
+          <p>Medicina: <span class="{{$image->medical}}"></span></p>
+          <p>Violenza: <span class="{{$image->violence}}"></span></p>
+          <p>Contenuto Ammiccante: <span class="{{$image->racy}}"></span></p>
+      </div>
+    </div>
     <div class="row">
         <div class="col-12 col-md-6">
             <form action="{{route('revisor.accept_announce',['announce' => $announce_to_check])}}" method="POST">
