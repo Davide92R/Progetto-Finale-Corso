@@ -21,6 +21,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    {{-- aos js animation photo --}}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     @vite(["resources/css/app.css" , "resources/js/app.js"])
     @livewireStyles
     <title>Document</title>
@@ -31,7 +34,9 @@
 
     <x-footer></x-footer>
     @livewireScripts
-
+    
     <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

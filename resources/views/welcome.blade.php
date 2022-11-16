@@ -12,6 +12,7 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1>{{__('ui.welcome')}}<span clsas="d-block Monserrat"> Presto.it</span></h1>
+                    <p class="subtitle">sito per pubblicazione annunci!</p>
                     <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
                 @auth
@@ -30,8 +31,9 @@
                 @endguest
             </div>
             <div class="col-lg-7">
-                <div class="hero-img-wrap">
-                    <img src="images/couch.png" class="img-fluid">
+                
+                <div data-aos="fade-up-right" class="hero-img-wrap">
+                    <img src="images/header.png" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -89,16 +91,19 @@
 <div class="why-choose-section">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-6">
+            <div data-aos="fade-right" class="col-lg-6">
                 <h2 class="section-title">Perchè scegliere noi</h2>
                 <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
 
-                <div class="row my-5">
+                <div  class="row my-5">
                     <div class="col-6 col-md-6">
                         <div class="feature">
-                            <div class="icon">
-                                <img src="images/truck.svg" alt="Image" class="imf-fluid">
-                            </div>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/iejknaed.json"
+                            trigger="hover"
+                            colors="outline:#121331,primary:#545454,secondary:#66a1ee,tertiary:#ee6d66,quaternary:#646e78"
+                            style="width:75px;height:75px">
+                        </lord-icon>
                             <h3>Spedizioni gratuite &amp; veloci</h3>
                             <p>...con una spesa minima di 59 euro</p>
                         </div>
@@ -106,9 +111,12 @@
 
                     <div class="col-6 col-md-6">
                         <div class="feature">
-                            <div class="icon">
-                                <img src="images/bag.svg" alt="Image" class="imf-fluid">
-                            </div>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/cllunfud.json"
+                            trigger="hover"
+                            colors="outline:#121331,primary:#66a1ee,secondary:#ee6d66"
+                            style="width:75px;height:75px">
+                        </lord-icon>
                             <h3>Aquista facilmente, velocemente</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis reprehenderit repellendus hic placeat atque ab voluptas pariatur debitis autem consequatur, aliquid officiis fugit fugiat aspernatur sit iure, dolore nisi illum!</p>
                         </div>
@@ -116,9 +124,12 @@
 
                     <div class="col-6 col-md-6">
                         <div class="feature">
-                            <div class="icon">
-                                <img src="images/support.svg" alt="Image" class="imf-fluid">
-                            </div>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/bjnaomnr.json"
+                            trigger="hover"
+                            colors="outline:#121331,primary:#ee6d66,secondary:#545454,tertiary:#9cc2f4"
+                            style="width:75px;height:75px">
+                        </lord-icon>
                             <h3>Supporto 24/7</h3>
                             <p>offriamo un supporto per tutti h24.</p>
                         </div>
@@ -126,9 +137,12 @@
 
                     <div class="col-6 col-md-6">
                         <div class="feature">
-                            <div class="icon">
-                                <img src="images/return.svg" alt="Image" class="imf-fluid">
-                            </div>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/siuqqewt.json"
+                            trigger="hover"
+                            colors="primary:#121331,secondary:#4bb3fd,tertiary:#ffc738,quaternary:#ebe6ef,quinary:#646e78,senary:#ee6d66"
+                            style="width:75px;height:75px">
+                        </lord-icon>
                             <h3>Pagamenti sicuri</h3>
                             <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                         </div>
@@ -137,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-5">
+            <div data-aos="fade-left" class="col-lg-5">
                 <div class="img-wrap">
                     <img src="images/why-choose-us-img.jpg" alt="Image" class="img-fluid">
                 </div>
@@ -154,12 +168,12 @@
         <div class="row justify-content-between">
             <div class="col-lg-7 mb-5 mb-lg-0">
                 <div class="imgs-grid">
-                    <div class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
-                    <div class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
-                    <div class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
+                    <div data-aos="fade-up-right"  class="grid grid-1"><img src="images/img-grid-1.jpg" alt="Untree.co"></div>
+                    <div data-aos="fade-down-left" class="grid grid-2"><img src="images/img-grid-2.jpg" alt="Untree.co"></div>
+                    <div data-aos="fade-up-right" class="grid grid-3"><img src="images/img-grid-3.jpg" alt="Untree.co"></div>
                 </div>
             </div>
-            <div class="col-lg-5 ps-lg-5">
+            <div data-aos="fade-up-right" class="col-lg-5 ps-lg-5">
                 <h2 class="section-title mb-4">Come è nato Presto.it?</h2>
                 <p class="mb-5">Il nostro scopo è connettere le <strong>persone!</strong> <br>Puntiamo a rendere la compravendita di <strong>Resell</strong> il più facile possibile, sia per il <strong>venditore</strong>, che per <strong>l'acquirente!</strong> <br>Che altro dirvi? Ci vediamo "<strong>Presto!</strong>"</p>
                 {{-- <p><a herf="#" class="btn">Esplora</a></p> --}}

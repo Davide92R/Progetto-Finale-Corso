@@ -87,7 +87,7 @@
                             Categorie
                         </a>
 
-                        <ul class="dropdown-menu" aria-labelledby="CategoryDropdown">
+                        <ul class="dropdown-menu " style="z-index:99; aria-labelledby="CategoryDropdown">
                             @foreach ($categories as $category)
                             <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->name}}</a></li>
                             <li><hr class="dropdown-divider"></li>
