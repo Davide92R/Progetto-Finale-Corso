@@ -18,3 +18,4 @@ yarn-error.log
 /storage/*.index
 /storage/announces.index-shm
 /storage/announces.index-wal
+GOOGLE_CREDENTIAL.JSON
