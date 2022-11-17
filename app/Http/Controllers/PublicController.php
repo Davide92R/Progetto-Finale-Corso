@@ -47,7 +47,7 @@ class PublicController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('publicAnnouncement')->with('success', 'Hai loggato con successo!');
+            return redirect()->route('publicAnnouncement')->with('success', 'Hai effettuato il login con successo!');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -56,7 +56,7 @@ class PublicController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('welcome')->with('success', 'Hai sloggato correttamente!');
+        return redirect()->route('welcome')->with('success', 'Hai effettuato il logout correttamente!');
     }
 
     public function categoryShow(Category $category){

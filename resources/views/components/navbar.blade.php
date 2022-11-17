@@ -104,13 +104,16 @@
 
             @auth
                 @if (Auth::user()->is_revisor)
-                    <a class="nav-link navTextEnd" href="{{route('revisor.index')}}">Revisor
-
+                    <a class="nav-link navTextEnd " href="{{route('revisor.index')}}">Revisor
+                      <span class="position-relative badge rounded-pill bg-danger notifica">
+                        {{App\Models\Announce::toBeRevisionedCount()}}
+                        <span class="visually-hidden">Messaggi non letti</span>
+                      </span>
                     </a>
                 @endif
 
                 <div class="d-flex align-items-center">
-                    <a class="nav-link navTextEnd" href="#">{{__('ui.welcome2')}} {{Auth::user()->name}}</a>
+                    <a class="nav-link navTextEnd disabled text-white" href="#">{{__('ui.welcome2')}} {{Auth::user()->name}}</a>
                     <a class="nav-link navTextEnd" href="{{route('logout')}}">Logout</a>
                 </div>
             @endauth

@@ -1,9 +1,12 @@
 <?php
 return[
+    //welcome page
     'allAnnounces'=>'Ecco i nostri annunci',
     'welcome'=>'Benvenuto su',
     'subtitle'=>'Sito per pubblicazione annunci',
     'postAnnuonce'=>'Registrati per pubblicare un annuncio!',
+    'postAnnounce2'=>'Pubblica un annuncio',
+    'postAnnounce3'=>'Pubblica il tuo annuncio, Facile, Veloce e "Presto"',
     'buttonDet'=>'Dettaglio',
     'announces'=>'Tutti gli Annunci',
     'category'=>'Categorie',
@@ -15,10 +18,15 @@ return[
     'shipping'=>'Spedizioni Gratuite & Veloci',
     'shipping2'=>'Con una spesa minima di 59 €',
     'purchase'=>'Acquista facilmente e velocemente',
+    'purchase2'=>'Questo è il nostro principale obiettivo',
     'support'=>'Supporto 24/7',
     'support2'=>'Offriamo un supporto per tutti h24.',
     'payment'=>'Pagamenti sicuri',
-    'born'=>"Com'è nato",
+    'payment2'=>'Pagamenti sicuri con la tua carta tramite il circuito Stripe.',
+    'born'=>"Com'è nato Presto.it",
+    'bornParagraph'=>"Il nostro scopo è connettere le persone!
+        Puntiamo a rendere la compravendita di Resell il più facile possibile, sia per il venditore, che per l'acquirente!
+        Che altro dirvi? Ci vediamo 'Presto!'",
     'explore'=>'Esplora la categoria',
     'noAnnounces'=>'Non sono presenti annunci per questa categoria',
     'newAds'=>'Pubblicane uno',
@@ -34,10 +42,25 @@ return[
     'send'=>'Invia',
     // Sezione Login
     'mail'=>'Indirizzo email',
-    'thirdParties'=>'Non scambieremo la tua mail con parti terze',
+    'thirdParties'=>'Non condivideremo la tua mail con parti terze',
     // Sezione Registrazione
     'name'=>'Nome',
     'confirm'=>'Conferma Password',
     'register'=>'Registra',
-
+    // Footer
+    'workWithUs'=>'Lavora con noi',
+    'workWithUs2'=>'Se vuoi aiutarci con il nostro grande sogno, diventa Revisore! Clicca la scritta "Lavora con noi"',
+    // Revisor
+    'noReviewable'=>'Non ci sono Annunci da revisionare',
+    'imgRevisor'=>'Revisione Immagini',
+    'adult'=>'Contenuto per adulti',
+    'satire'=>'Satira',
+    'medicine'=>'Medicina',
+    'violence'=>'Violenza',
+    'winkingContent'=>'Contenuto Ammiccante',
+    'accept'=>'Accetta',
+    'refuses'=>'Rifiuta',
+    'sentIn'=>'Inviato il',
+    // Flash message
+    'flashRegister'=>'Ti sei registrato con successo!',
 ];

@@ -1193,6 +1193,7 @@ hr.solid {
   }
 
   .loginRegisterButton:hover{
+    background-color: var(--details-red);
     scale: 1.1;
    }
 
@@ -1320,4 +1321,8 @@ hr.solid {
     font-size: 18px;
     color: var(--black);
     margin-bottom: 2%;
+   }
+
+   .notifica{
+    padding-bottom: 5px;
    }

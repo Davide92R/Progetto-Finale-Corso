@@ -4,16 +4,23 @@
             <div class="col-12 col-md-3">
                 <h1 class="footerTitle FooterTypewriting">About Us</h1> <br>
 
-                <p class="footerDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nemo impedit non quis? Excepturi, nulla sit quae beatae dicta consectetur similique a, dolorem ducimus animi sapiente, harum labore explicabo! Nisi?</p>
+                <p class="footerDesc">
+                    <ul class="footerDesc">
+                        <li> Boem Chiara : Back-end</li>
+                        <li> Roggero Davide : Back-end</li>
+                        <li> Pavone Federico : Front-end</li>
+                        <li> Rizzi Francesco : Front-end</li>
+                    </ul>
+                </p>
             </div>
             <div class="col-12 col-md-1">
 
             </div>
 
             <div class="col-12 col-md-3">
-                <a href="{{route("becomeRevisor")}}"><h1 class="footerTitle FooterTypewriting">Lavora con noi</h1></a> <br>
+                <a href="{{route("becomeRevisor")}}"><h1 class="footerTitle FooterTypewriting">{{__('ui.workWithUs')}}</h1></a> <br>
 
-                <p class="footerDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nemo impedit non quis? Excepturi, nulla sit quae beatae dicta consectetur similique a, dolorem ducimus animi sapiente, harum labore explicabo! Nisi?</p>
+                <p class="footerDesc">{{__('ui.workWithUs2')}}</p>
 
             </div>
             <div class="col-12 col-md-1">
