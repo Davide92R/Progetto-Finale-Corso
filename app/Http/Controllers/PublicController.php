@@ -60,10 +60,12 @@ class PublicController extends Controller
     }
 
     public function categoryShow(Category $category){
+        $announces=Announce::where('is_accepted', true)->orderBy('created_at','desc')->take(9)->get();
         return view('categoryShow', compact('category'));
     }
 
     public function showAnnouncement(Announce $announce){
+        
         return view('showAnnouncement', compact('announce'));
     }
 
