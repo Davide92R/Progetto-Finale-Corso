@@ -98,7 +98,7 @@ class CreateAnnouncement extends Component
 
         if(count($this->images)){
             foreach($this->images as $image){
-                    $announce->images()->create(['path'=>$image->store('images','public')]);
+                    // $announce->images()->create(['path'=>$image->store('images','public')]);
                     $newFilename="announces/{$announce->id}";
                     $newImage=$announce->images()->create(['path'=>$image->store($newFilename,'public')]);
 

@@ -72,7 +72,8 @@
                     </div> --}}
 
                     <div class="card cardCustom">
-                        <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="...">
+                        <img src="{{!$announce->images()->get()->isEmpty() ? $announce->images()->first()->getUrl(400, 300) : 'https://picsum.photos/200'}}" class="img-fluid" alt="...">
+                        {{-- <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()-> : 'https://picsum.photos/200'}}" class="card-img-top imgcard" alt="..."> --}}
                         <div class="card-body">
                             <h5 class="card-title cardTitle">{{$announce->title}}</h5>
                             <p class="card-text cardPrice">{{$announce->price}}$</p>
