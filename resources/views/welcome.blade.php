@@ -3,7 +3,7 @@
 <div class="hero">
     <div class="container">
         @if (session('success'))
-        <div class="alert alert-success">
+        <div class="alert alert-success rilievo">
             {{ session('success') }}
         </div>
         @endif

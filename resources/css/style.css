@@ -1326,3 +1326,6 @@ hr.solid {
    .notifica{
     padding-bottom: 5px;
    }
+   .rilievo{
+    z-index: 9999;
+   }
