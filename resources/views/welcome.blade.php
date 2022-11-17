@@ -1,13 +1,12 @@
 <x-layout>
-    @if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-    @endif
-
 <!-- Start Section 1 header -->
 <div class="hero">
     <div class="container">
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
@@ -25,7 +24,7 @@
                 @guest
                 <div class="col-12 d-flex justify-content-center align-items-center mt-4">
                     <div class="nav-item">
-                        <a href="{{route("registerview")}}"><button class="btn btnCard headButt btn-primary">{{__('ui.postAnnuonce')}}</button></a>
+                        <a href="{{route("registerview")}}"><button class="btn headButt"><span class="White footerTitle">{{__('ui.postAnnuonce')}}</span></button></a>
                     </div>
                 </div>
                 @endguest

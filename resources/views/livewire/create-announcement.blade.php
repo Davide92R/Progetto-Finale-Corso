@@ -1,45 +1,45 @@
-<div>
-    <div class="pt-5">
-        <h2 class="my-5 text-center titoli">{{__('ui.publish')}}</h2>
-    
+<div class="">
+    <div class="createForm">
+        <h2 class="text-center createTitle mt-5">{{__('ui.publish')}}</h2>
+
         @if (session()->has('message'))
             <div class="alert alert-success">
                 {{ session('message') }}
             </div>
         @endif
-    
+
         <form wire:submit.prevent="storeAnnouncement">
             @csrf
             <div class="form-group mt-5">
                 <label for="titolo">{{__('ui.title')}}</label>
-                <input wire:model="title" type="text" class="form-control @error('title') is-invalid @enderror" id="titolo" placeholder="{{__('ui.title2')}}">
-    
+                <input wire:model="title" type="text" class="createInput form-control @error('title') is-invalid @enderror" id="titolo" placeholder="{{__('ui.title2')}}">
+
                 @error('title')
                         {{$message}}
                 @enderror
             </div>
-    
+
             <div class="form-group mt-5">
                 <label for="descrizione">{{__('ui.description')}}</label>
-                <textarea wire:model="description" class="form-control @error('description') is-invalid @enderror" id="descrizione" rows="3"></textarea>
-    
+                <textarea wire:model="description" class="createInput form-control @error('description') is-invalid @enderror" id="descrizione" rows="3"></textarea>
+
                 @error('description')
                         {{$message}}
                 @enderror
             </div>
-    
+
             <div class="form-group mt-5">
                 <label for="prezzo">{{__('ui.price')}}</label>
-                <input wire:model="price" type="number" class="form-control @error('price') is-invalid @enderror" id="prezzo" placeholder="{{__('ui.price2')}}">
-    
+                <input wire:model="price" type="number" class="createInput form-control @error('price') is-invalid @enderror" id="prezzo" placeholder="{{__('ui.price2')}}">
+
                 @error('price')
                         {{$message}}
                 @enderror
             </div>
-     
+
             <div class="mb-3">
                 <label for="category">{{__('ui.category')}}</label>
-                <select wire:model.defer="category" id="category" class="form-control">
+                <select wire:model.defer="category" id="category" class="createInput form-control">
                     <option value="">{{__('ui.category2')}}...</option>
                     @foreach ($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
@@ -47,13 +47,13 @@
                 </select>
             </div>
             <div class="mb-3">
-                <input wire:model="temporary_images" type="file" name="images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror"
+                <input wire:model="temporary_images" type="file" name="images" multiple class="createInput form-control shadow @error('temporary_images.*') is-invalid @enderror"
                 placeholder="Img"/>
                 @error('temporary_images.*')
                 <p class="text-danger mt-2">{{$message}}</p>
                 @enderror
             </div>
-          
+
          @if(!empty($images))
              <div class="row">
                  <div class="col-12 ">
@@ -70,9 +70,9 @@
              </div>
          @endif
 
-    
-    
-            <button class="btn btn-primary" type="submit">{{__('ui.send')}}</button>
+
+
+            <button class="btn loginRegisterButton" type="submit"><span class="loginRegisterTextButt">{{__('ui.send')}}</span></button>
         </form>
     </div>
 </div>

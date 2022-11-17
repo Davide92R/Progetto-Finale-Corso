@@ -70,10 +70,10 @@
       </ul>
     </div>
   </div> --}}
-</nav> 
+</nav>
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand navLogo" href="{{route("welcome")}}">Presto.it</a>
+        <a class="navbar-brand navLogo" href="{{route("welcome")}}"><img src="/images/prestow.png" alt="" class="imgNav"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -105,7 +105,7 @@
             @auth
                 @if (Auth::user()->is_revisor)
                     <a class="nav-link navTextEnd" href="{{route('revisor.index')}}">Revisor
-                      
+
                     </a>
                 @endif
 
