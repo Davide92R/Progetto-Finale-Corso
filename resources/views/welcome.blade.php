@@ -12,7 +12,7 @@
             <div class="col-lg-5">
                 <div class="intro-excerpt">
                     <h1 class="headerTypewriting">{{__('ui.welcome')}}<span clsas="d-block Monserrat"> Presto.it</span></h1>
-                    <p class="subtitle">sito per pubblicazione annunci!</p>
+                    <p class="subtitle">{{__('ui.subtitle')}}!</p>
                     <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
                 @auth
@@ -77,7 +77,7 @@
                             <h5 class="card-title cardTitle">{{$announce->title}}</h5>
                             <p class="card-text cardPrice">{{$announce->price}}$</p>
                             <p class="card-text cardDesc">{{$announce->description}}</p>
-                            <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">Dettagli</span></a>
+                            <a href="{{route("showAnnouncement", compact("announce"))}}" class="btn btnCard cardButt"><span class="buttText">{{__('ui.buttonDet')}}</span></a>
                         </div>
                     </div>
                 @endif
@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row justify-content-between">
             <div data-aos="fade-right" class="col-lg-6">
-                <h2 class="section-title">Perchè scegliere noi</h2>
+                <h2 class="section-title">{{__('ui.why')}}</h2>
                 <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
 
                 <div  class="row my-5">
@@ -104,8 +104,8 @@
                             colors="outline:#121331,primary:#545454,secondary:#66a1ee,tertiary:#ee6d66,quaternary:#646e78"
                             style="width:75px;height:75px">
                         </lord-icon>
-                            <h3>Spedizioni gratuite &amp; veloci</h3>
-                            <p>...con una spesa minima di 59 euro</p>
+                            <h3>{{__('ui.shipping')}}</h3>
+                            <p>...{{__('ui.shipping2')}}</p>
                         </div>
                     </div>
 
@@ -117,7 +117,7 @@
                             colors="outline:#121331,primary:#66a1ee,secondary:#ee6d66"
                             style="width:75px;height:75px">
                         </lord-icon>
-                            <h3>Aquista facilmente, velocemente</h3>
+                            <h3>{{__('ui.purchase')}}</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis reprehenderit repellendus hic placeat atque ab voluptas pariatur debitis autem consequatur, aliquid officiis fugit fugiat aspernatur sit iure, dolore nisi illum!</p>
                         </div>
                     </div>
@@ -130,8 +130,8 @@
                             colors="outline:#121331,primary:#ee6d66,secondary:#545454,tertiary:#9cc2f4"
                             style="width:75px;height:75px">
                         </lord-icon>
-                            <h3>Supporto 24/7</h3>
-                            <p>offriamo un supporto per tutti h24.</p>
+                            <h3>{{__('ui.support')}}</h3>
+                            <p>{{__('ui.support2')}}</p>
                         </div>
                     </div>
 
@@ -143,7 +143,7 @@
                             colors="primary:#121331,secondary:#4bb3fd,tertiary:#ffc738,quaternary:#ebe6ef,quinary:#646e78,senary:#ee6d66"
                             style="width:75px;height:75px">
                         </lord-icon>
-                            <h3>Pagamenti sicuri</h3>
+                            <h3>{{__('ui.payment')}}</h3>
                             <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                 </div>
             </div>
             <div data-aos="fade-up-right" class="col-lg-5 ps-lg-5">
-                <h2 class="section-title mb-4">Come è nato Presto.it?</h2>
+                <h2 class="section-title mb-4">{{__('ui.born')}} Presto.it?</h2>
                 <p class="mb-5">Il nostro scopo è connettere le <strong>persone!</strong> <br>Puntiamo a rendere la compravendita di <strong>Resell</strong> il più facile possibile, sia per il <strong>venditore</strong>, che per <strong>l'acquirente!</strong> <br>Che altro dirvi? Ci vediamo "<strong>Presto!</strong>"</p>
                 {{-- <p><a herf="#" class="btn">Esplora</a></p> --}}
             </div>
