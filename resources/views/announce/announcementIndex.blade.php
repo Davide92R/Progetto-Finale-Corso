@@ -25,6 +25,7 @@
                                 </div>
                             </div>
                         </div>
+
                     @empty
                         <div class="col-12">
                             <div class="alert alert-warning py-3 shadow">

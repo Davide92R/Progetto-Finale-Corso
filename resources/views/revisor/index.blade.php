@@ -1,15 +1,6 @@
 <x-layout>
-  <div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
-    <div class="row">
-      <div class="col-12 text-light p-5">
-          <h1>
-                {{$announce_to_check ? "Ecco l'annuncio da revisionare" : "Non ci sono annunci da revisionare."}}
-          </h1>
-      </div>
-    </div>
-  </div>
   @if($announce_to_check)
-    <div class="container ">
+    {{-- <div class="container">
       <div class="row ">
         <div class="col-12">
 
@@ -22,7 +13,7 @@
                       </div>
                   @endforeach
                 </div>
-              @else 
+              @else
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="https://picsum.photos/id/27/1200/400"  class=" img-fluid p-3" alt="...">
@@ -72,7 +63,52 @@
     </div>
 
 
-  </div>
+  </div> --}}
+
+
+    @if ($announce_to_check->images)
+        <div class="container-fluid vh-100">
+            <div class="row">
+                <div class="col-12 col-md-6 vh-100 d-flex justify-content-end align-items-center">
+                    <img class="detImmagine" src="{{!$announce_to_check->images()->get()->isEmpty() ? Storage::url($announce_to_check->images()->first()->path) : 'https://picsum.photos/200'}}" alt="">
+                </div>
+                <div class="col-12 col-md-6 vh-100 d-flex justify-content-start align-items-center">
+                    <div class="w-50 detGeneral">
+                        <h2 class="detTitle">{{$announce_to_check->title}}</h2>
+                        <h2 class="detDesc">{{$announce_to_check->description}}</h2>
+                        <h2 class="detPrice">{{$announce_to_check->price}}$</h2>
+
+                        <h2 class="detDesc">Inviato il: {{$announce_to_check->created_at->format('d/m/Y')}}</h2>
+
+                        <div class="d-flex">
+                            <form action="{{route('revisor.accept_announce',['announce' => $announce_to_check])}}" method="POST">
+                                @csrf
+                                @method('PATCH')
+                                <button href="" class="accButt" type="submit"><span class="detButtText">Accetta</span></button>
+                            </form>
+                            <form action="{{route('revisor.reject_announce', ['announce'=>$announce_to_check])}}" method="POST" class="ms-3">
+                                @csrf
+                                @method('PATCH')
+                                <button class="refButt" type="submit"><span class="detButtText">Rifiuta</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+
+@else
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-center vh-100">
+                <h1 class="text-center">Non ci sono Annunci da revisionare</h1>
+            </div>
+        </div>
+    </div>
+
+
 @endif
+
 
 </x-layout>

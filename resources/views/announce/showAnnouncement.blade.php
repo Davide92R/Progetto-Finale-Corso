@@ -1,25 +1,21 @@
 <x-layout>
-    <div class="container-fluid text-center bg-gradient bg success shadow mt-5">
+
+    <div class="container-fluid vh-100">
         <div class="row">
-            <div class="col-12 mt-4">
-                <h1>Benvenuto nella pagina di dettaglio di : {{$announce->title}}</h1>
+            <div class="col-12 col-md-6 vh-100 d-flex justify-content-end align-items-center">
+                <img class="detImmagine" src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" alt="">
+            </div>
+            <div class="col-12 col-md-6 vh-100 d-flex justify-content-start align-items-center">
+                <div class="w-50 detGeneral">
+                    <h2 class="detTitle">{{$announce->title}}</h2>
+                    <h2 class="detDesc">{{$announce->description}}</h2>
+                    <br>
+                    <h2 class="detDesc"><strong>Categoria:</strong> {{$announce->category->name}}</h2>
+                    <h2 class="detPrice">{{$announce->price}}$</h2>
+                    <button href="" class="detButt"><span class="detButtText">Acquista Ora!</span></button>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-12 col-md-6">
-                <img src="{{!$announce->images()->get()->isEmpty() ? Storage::url($announce->images()->first()->path) : 'https://picsum.photos/200'}}" class="card-img-top" alt="...">
-            </div>
-            <div class="col-12 col-md-6 ml-5">
-                <h1>{{$announce->title}}</h1>
-                <p>{{$announce->description}}</p>
-                <p>{{$announce->price}} <span>€</span></p>
-                <a href="" class="btn btn-success mb-2">Categoria: {{$announce->category->name}}</a>
-                <p class="card-footer">Pubblicato il: {{$announce->created_at->format('d/m/Y')}}</p>
-                <p class="card-footer">-Autore: {{$announce->user->name ?? ''}}</p>
-            </div>
-        </div>
-    </div>
 </x-layout>

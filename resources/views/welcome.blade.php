@@ -11,7 +11,7 @@
         <div class="row justify-content-between">
             <div class="col-lg-5">
                 <div class="intro-excerpt">
-                    <h1>{{__('ui.welcome')}}<span clsas="d-block Monserrat"> Presto.it</span></h1>
+                    <h1 class="headerTypewriting">{{__('ui.welcome')}}<span clsas="d-block Monserrat"> Presto.it</span></h1>
                     <p class="subtitle">sito per pubblicazione annunci!</p>
                     <p class="mb-5">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
                 </div>
@@ -31,7 +31,7 @@
                 @endguest
             </div>
             <div class="col-lg-7">
-                
+
                 <div data-aos="fade-up-right" class="hero-img-wrap">
                     <img src="images/header.png" class="img-fluid">
                 </div>
