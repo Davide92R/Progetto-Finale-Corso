@@ -22,6 +22,7 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    @endif
                 </div>
             </div>
             <div class="col-12 col-md-3 vh-100 d-flex justify-content-start align-items-center">
@@ -70,7 +71,6 @@
             </div>
         </div>
     </div>
-    @endif
 
     @else
     <div class="container">
