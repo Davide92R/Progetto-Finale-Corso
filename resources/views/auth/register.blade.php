@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 registerForm">
-                    <h1 class="loginTitle mt-5">Register</h1>
+                    <h1 class="loginTitle mt-5">{{__('ui.register')}}</h1>
                     <form method="POST" action="{{route('register')}}" class="loginPost">
                         @csrf
 
